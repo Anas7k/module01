@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import express from 'express';
 const app = express();
 
@@ -10,4 +11,18 @@ app.get('/', (req, res) => {
 app.listen(5000, () => {
 console.log('Server is running on port 5000');
 });
+=======
+import express from 'express';
+const app = express();
+
+app.use(express.static('public'));
+
+app.get('/', (req, res) => {
+    res.sendFile('index.html', { root: 'public' });
+});
+
+app.listen(5000, () => {
+console.log('Server is running on port 5000');
+});
+>>>>>>> 619212e58538b851bc6544955ab8b7caef9b4581
   
